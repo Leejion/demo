@@ -1,0 +1,36 @@
+.hide{
+    display: none!important;
+}
+.button-component{
+    width:80px;
+    height:32px;
+    border-radius: 4px;
+    font-size:14px;
+    line-height:32px;
+    font-family:Helvetica;
+    margin-right:10px;
+    padding:0;
+}
+//主要按钮
+.button-component.main-button{
+    background:rgba(225,76,70,1);
+    color:rgba(255,255,255,1);
+    &:hover{
+        background:rgba(210,61,55,1)
+    }
+    &:active{
+        background:rgba(178,51,46,1);
+    }
+}
+//次级按钮
+.button-component.secondary-button{
+    background:rgba(255,255,255,1);
+    color:rgba(71,77,84,1);
+    &:hover{
+        background:rgba(9,44,66,0.08)
+    }
+    &:active{
+        background:rgba(225,76,70,0.1);
+        color:rgba(225,76,70,1)
+    }
+}

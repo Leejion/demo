@@ -1,0 +1,572 @@
+@import '../../../public/variables.less';
+
+@borderCol: #EDECEC;
+@hoverCol: #F4F4F4;
+@activeCol: #E14C46;
+
+h2 {padding: 0; margin: 0}
+/**布局类**/
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.cf{
+    *zoom: 1;
+
+    &:before, &:after {
+        display: table;
+        content: " ";
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.nc-approve-process-wrap {
+	margin: 20px 48px;
+	border-radius: 2px;
+	border: 1px solid @borderCol;
+
+	.approve-process-hearder {
+		line-height: 50px;
+		height: 50px;
+		padding: 0 20px;
+		border-bottom: 1px solid @borderCol;
+	}
+
+	.approve-process-main {
+		display: flex;
+		flex-flow:row;
+	}
+}
+
+.approve-process-title {
+	width: 202px;
+	font-size: 16px;
+	color: @b-color;
+}
+
+.process-hearder-filter {
+	.u-checkbox {
+        cursor: pointer;
+        .u-checkbox-label {
+            &:before {
+                top: 14px;
+            }
+            &:after {
+                top: 14px;
+            }
+        }
+    }
+}
+
+.u-tree {
+    li.u-process-tree {
+        li.u-process-tree-child {
+            a {
+                width: 210px;
+                margin-left: -17px;
+                padding-left: 40px;
+            }
+        }
+    }
+}
+
+.approve-process-tree {
+	width: 220px;
+	border-right: 1px solid @borderCol;
+
+	.u-process-tree {
+		padding: 10px 0;
+
+		.title-con {
+			display: flex;
+		}
+	}
+
+	.u-process-tree-child {
+		width: 100%;
+		height: 42px;
+		line-height: 42px;
+		&:hover {
+			background-color: @hoverCol;
+		}
+
+		a[title^="leaf"] {
+			padding-left: 18px;
+		}
+		a.u-tree-node-content-wrapper-normal {
+			padding-left: 18px;
+		}
+
+		.uf-add-c-o {
+			color: @activeCol;
+		}
+
+		&.tree-active {
+			background-color: @hoverCol;
+			.title-middle {
+				color: @activeCol;
+			}
+		}
+	}
+
+	.u-tree li ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	.u-tree li a:hover {
+		background-color: transparent;
+	}
+
+	.u-tree li a.u-tree-node-selected {
+		background-color: transparent;
+	}
+}
+
+.approve-process-table {
+	flex: 1;
+	.u-table-content {
+		min-height: 400px;
+	}
+	.process-table-pagination {
+
+	}
+}
+
+.u-tree {
+	li.u-process-tree {
+		span.u-tree-noline_close, span.u-tree-noline_open {
+			cursor: pointer;
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			margin-right: 4px;
+			text-align: center;
+			line-height: 16px;
+			border: 1px solid #e9e9e9;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			background: #fff;
+
+			&:after {
+				content: ""!important;
+			}
+			&:before {
+				content: "+";
+			}
+		}
+		 span.u-tree-noline_open {
+			
+			&:before {
+				content: "-";
+			}
+		}
+	}
+}
+
+.table-modal {
+	display: flex !important;
+	justify-content: center;
+    align-items: center;
+    .u-modal-content {
+        .u-modal-header {
+            border-bottom: 1px solid #e9e9e9;
+            padding: 15px 20px;
+            .u-modal-title {
+                font-size: 13px;
+                color: #666;
+                font-family: MicrosoftYaHei;
+                font-weight: normal;
+            }
+            .u-close {
+                color: #999;
+                opacity: 1;
+                &:hover {
+                    color: #666;
+                }
+            }
+        }
+        .u-modal-body {
+            padding: 25px 20px 10px 40px;
+            .table-modal-form {
+                padding: 0 80px;
+                &.u-form .u-row .u-form-item.u-form-inline {
+                    min-height: 54px;
+                }
+            }
+            .u-form-group {
+                .modal-label {
+                    display: block;
+                    float: left;
+                    width: 25% !important;
+                    text-align: right;
+                    line-height: 30px;
+                    font-size: 13px;
+                    font-family: MicrosoftYaHei;
+                    color: #666;
+                    // margin-bottom: 15px;
+                    .required {
+                        color: red;
+                        font-style: normal;
+                        margin-right: 6px;
+                    }
+                }
+                .modal-content {
+                    margin-left: 10px;
+                    display: inline-block;
+                    margin-bottom: 15px;
+                    font-size: 13px;
+                    width: 240px ;
+                    input {
+                        font-size: 13px;
+                    }
+                    &.modal-small {
+                        width: 120px ;
+                        .u-select-selection {
+                            width: 120px ;
+                        }
+                        .u-select-dropdown {
+                            width: 120px ;
+                        }
+                        div {
+                            width: 120px ;
+                        }
+                    }
+                    &.modal-input-small {
+                        width: 120px ;
+                    }
+                }
+                // 下拉框字体大小
+                .u-select {
+                    font-size: 13px;
+                }
+                .u-row.refer {
+                    margin-left: 10px;
+                    display: inline-block;
+                    width: 240px ;
+                    margin-bottom: 15px;
+                    // input{
+                    // 	font-size: 13px;
+                    // }
+                }
+                .u-modal-content {
+                    font-size: 13px;
+                }
+            }
+        }
+        .u-modal-footer {
+            height: 60px;
+            padding: 10px 21px;
+            background-color: #fafafa;
+            border-radius: 0px 0px 4px 4px;
+            .btn-2 {
+                background-color: @activeCol;
+                color: @w-color;
+                height: 36px ;
+                width: 102px ;
+                font-size: 13px;
+                &:hover {
+                    background-color:@activeCol;
+                    border-color: @activeCol;
+                }
+            }
+            .btn-2.btn-cancel {
+                background-color: @w-color;
+                border: 1px solid #bdbdbd;
+                border-radius: 2px;
+                color: #333;
+                margin-left: 8px;
+                &:hover {
+                    background-color: @w-color ;
+                    border-color: @activeCol;
+                    color: @activeCol;
+                }
+            }
+        }
+    }
+}
+
+.u-select-dropdown {
+    animation: 0.3s ease;
+    .u-select-dropdown-menu {
+        .u-select-dropdown-menu-item,
+        .u-select-dropdown-menu-item-active {
+            height: 28px !important;
+            line-height: 28px !important;
+            padding: 0 8px !important;
+            color: #666 !important;
+            background: @w-color !important;
+            &:hover,
+            &.u-select-dropdown-menu-item-selected {
+                background: #eee !important;
+                color: @activeCol !important;
+                font-weight: 400 !important;
+            }
+        }
+    }
+}
+
+// 分页部分
+.approve-process-pagination-group {
+    height: 50px;
+    line-height: 50px;
+    border-radius: 0 0 3px 3px;
+    padding: 0px 20px;
+    margin-top: -1px;
+    z-index: 10;
+    .approve-process-page {
+        float: left;
+        .u-select {
+            width: 80px;
+            margin-right: 10px;
+        }
+
+        .u-select-selection {
+            border-radius: 2px !important;
+            .u-select-selection__rendered {
+                margin: 0 0 0 8px;
+                .u-select-selection-selected-value {
+                    padding: 0;
+                    height:18px; 
+                    font-size:13px;
+                    font-family:PingFangSC-Regular;
+                    color:rgba(0,0,0,0.65);
+                    line-height:18px;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+
+    .u-select-selection--single {
+        margin-top: 10px;
+        .u-select-selection-selected-value {
+            line-height: 30px;
+        }
+    }
+
+    .process-table-pagination {
+        .u-pagination {
+            float: right;
+            margin-right: -5px;
+            font-size: 13px;
+            height: 50px;
+            line-height: 50px;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            li {
+                height: 30px;
+                :hover {
+                    border-color: @activeCol;
+                }
+            }
+            & > .active > a {
+                // background-color: @activeCol;
+                // border-color: @activeCol;
+                color: @activeCol;
+                border-color: #c9c9c9;
+                background-color: #fff;
+                height: 26px;
+                line-height: 26px;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            & > li > a,
+            & > li > span {
+                border-color: #e3e7ed;
+                color: #595959;
+                height: 26px;
+                line-height: 26px;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            li {
+                margin-left: 8px;
+                a {
+                    color: rgba(0,0,0,0.65);
+                    border: 1px solid #E3E7ED;
+                }
+                &:first-child, &:last-child {
+                    a {
+                        border-radius: 2px;
+                    }
+                }
+            }
+            li:not(.active):hover a{
+                color: @activeCol;
+                border: 1px solid #C9C9C9;
+                line-height: 26px;
+            }
+            li.active a {
+                background: @w-color;
+                color: @activeCol;
+                border: 1px solid @activeCol;
+                line-height: 26px;
+            }
+            li.disabled:not(:first-child):not(:last-child) {
+                margin-left: 4px !important;
+                a {
+                    border: none;
+                    line-height: 22px;
+                    span {
+                        color: #ccc;
+                        font-size: 24px;
+                        position: relative;
+                        top: -4px;
+                    }
+                }
+            }
+            li.disabled:not(:first-child):not(:last-child) +li {
+                margin-left: 4px !important;
+            }
+
+            li.disabled:first-child a span, li.disabled:last-child a span {
+                line-height: 24px;
+            }
+        }
+    }
+    
+    &.no-moredata {
+        text-align: center;
+        font-size: 13px;
+        font-family: PingFangSC-Regular;
+        color: #999;
+    }
+}
+
+// 表格
+.approve-process-table {
+    .u-table {
+        width:100%;
+        .money-right {
+            text-align: right !important;
+        }
+        .u-table-row.u-table-row-level-0 {
+            &:hover {
+                td,
+                .u-table-row-expand-icon {
+                    background: @t-table-hover!important;
+                }
+            }
+        }
+        .u-table-body {
+            min-height: 440px;
+            background-color: #fff;
+        }
+        i {
+            margin-right: 12px;
+            cursor: pointer;
+        }
+        .u-label {
+            font-size: 13px;
+        }
+        // 表头
+        .u-table-thead {
+            border-bottom: 1px solid @border-color;
+            tr {
+                background-color: @t-table-header;
+                height: 40px;
+                border-bottom: none;
+
+                &:hover {
+                    background: #f2f2f2;
+                }
+
+                th {
+                    background-color: transparent;
+                    font-family: PingFangSC-Regular;
+                    font-size: 13px;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    overflow: initial;
+                    white-space: initial;
+                    text-overflow: initial;
+                    // overflow: hidden;
+                    // white-space: nowrap;
+                    // text-overflow: ellipsis;
+                    color: #000 !important;
+                    font-weight: 400 !important;
+                }
+            }
+        }
+        .u-table-tbody {
+            border: none !important;
+            tr {
+                background-color: @w-color;
+                height: 40px;
+                &:hover {
+                    background: @t-table-hover!important;
+
+                    .process-table-opre {
+                        a {
+                            color: @activeCol;
+                        }
+                    }
+                }
+                .icon-style {
+                    &:hover {
+                        color: @t-btn-bgcolor;
+                    }
+                }
+                td {
+                    background-color: transparent;
+                    font-family: PingFangSC-Regular;
+                    font-size: 13px;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    max-width: 40px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    &:nth-child(1) {
+                        padding-left: 20px;
+                    }
+                    .table-jump {
+                        //table里进行路由跳转
+                        color: #0073da;
+                        cursor: pointer;
+                        &:active {
+                            color: red;
+                        }
+                    }
+
+                    .u-switch.is-checked {
+                        border-color: @activeCol;
+                        background-color: @activeCol;
+                    }
+                }
+            }
+        }
+        .u-table-content {
+            // 空列表样式
+            .u-table-placeholder {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -35px;
+                margin-left: -35px;
+                min-height: auto;
+                border: none;
+                min-height: 50px;
+                img {
+                    width: 52px;
+                }
+            }
+        }
+        &.double .u-table-tbody tr {
+            //一列显示俩行时，行高50px
+            height: 50px;
+        }
+        .process-table-opre {
+            a {
+                cursor: pointer;
+            }
+        }
+    }
+}

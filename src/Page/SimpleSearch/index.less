@@ -1,0 +1,46 @@
+@import '../../public/variables.less';
+.bd-header {
+    height: 50px;
+    margin-top: 20px;
+    border: 1px solid #e3e7ed;
+    border-radius: 3px 3px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .bd-header-title {
+        color: #333;
+        font-family: PingFangHK-Medium;
+        font-weight: 700;
+        font-size: 16px;
+    }
+    .bd-header-search {
+        margin-right: 20px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        &>div {
+            width: auto;
+            display: inline-block;
+        }
+        .u-form-control {
+            border: 1px solid #e3e7ed;
+        }
+        .u-form-control-suffix {
+            .uf {
+                display: none
+            }
+        }
+        .u-input-suffix {
+            .uf {
+                display: none
+            }
+        }
+    }
+    input::-webkit-input-placeholder {
+        color: #e3e7ed;
+    }
+    .searchbutton {
+        position: absolute;
+        right: 10px;
+    }
+}

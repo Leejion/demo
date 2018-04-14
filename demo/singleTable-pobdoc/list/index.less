@@ -1,0 +1,97 @@
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.cf{
+    *zoom: 1;
+
+    &:before, &:after {
+        display: table;
+        content: " ";
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.nc-pobdoc {
+    min-width: 1440px;
+    padding: 20px;
+    border-radius: 5px;
+    .header {
+        height: 40px;
+        width: 100%;
+        line-height: 40px;
+        & > button {
+            border-radius: 4px;
+            height: 24px;
+            line-height: 24px;
+            padding: 0px 10px;
+            margin: 8px 10px;
+            background-color: rgb(78, 126, 177);
+            border-color: rgb(78, 126, 177);
+            color: #fff;
+            font-size: 12px;
+            float: left;
+
+            &:first-child {
+                margin-left: 25px;
+            }
+
+            &:hover {
+                background-color: rgb(39, 116, 197);
+            }
+        }
+    }
+    .title {
+        line-height: 40px;
+        font-size: 16px;
+    }
+    .currency-opr-col {
+        width: 60px;
+
+        .currency-opr-del {
+            cursor: pointer;
+            &:hover {
+                color: rgb(216, 48, 48);
+            }
+        }
+    }
+
+
+    .hide {
+        display: none;
+    }
+
+    .content {
+        .u-table {
+            .u-table-body {
+                .u-checkbox {
+                    .u-checkbox-label {
+                        &:after, &:before {
+                            top: -12px;
+                        }
+                    }
+                }
+            }
+            .u-form-control.md {
+                width: 100px;
+                height: 28px;
+                line-height: 28px;
+            }
+            .datepicker-input-group.u-input-group {
+                height: 28px;
+                width: 100px;
+
+                .u-input-group-btn {
+                    right: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+    

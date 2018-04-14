@@ -1,0 +1,228 @@
+.NC_CreateSearch {
+  .switch{
+    //width:auto;
+    vertical-align: middle;
+    min-height: 30px;
+    line-height: 30px;
+  }
+  .checkbox{
+    width:auto;
+    vertical-align: middle;
+    min-height: 30px;
+    line-height: 30px;
+    .u-checkbox .u-checkbox-label:after, .u-checkbox .u-checkbox-label:before{
+      top:6px;
+    }
+  }
+  .refer .refer-input, [id^=refer] .refer-input{
+    height:30px;
+  }
+  .radioStyle{
+    width:auto;
+  }
+  .u-radio .u-radio-label:after, .u-radio .u-radio-label:before{
+    width: 14px;
+    height: 14px;
+    top: 5px;
+  }
+  .u-radio.is-checked .u-radio-label:after{
+    top: 8px;
+    height: 8px;
+    width: 8px;
+    margin-left: 3px;
+  }
+  input::-webkit-input-placeholder {
+    color: #ccc;
+    font-size: 12px;
+  }
+  .searchChild {
+    margin: 5px 0;
+    padding: 0 10px;
+    position:relative;
+    height:30px;
+    line-height: 30px;
+    input{
+      height:30px;
+    }
+
+    .nc-select.u-select, .nc-select .u-select-selection{
+      height:30px;
+      line-height:30px;
+    }
+
+
+    .mustFillIn{
+      position:absolute;
+      left: 0px;
+      top: 9px;
+      color: red;
+      z-index: 1000;
+    }
+  }
+  .lightapp-component-search{
+    display: flow-root;
+  }
+  .lightapp-component-search::after { content:''; display: table; clear: both }
+  .hideMore {
+    display:none
+  }
+  .showMoreSearch {
+    width: 29px;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 5px;
+    vertical-align: middle;
+    color: #e83932;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    i {
+      color: #00b39e;
+    }
+  }
+  .calendar-picker {
+    width: 100%;
+  }
+  .datepicker-input-group.u-input-group {
+    width: 100%;
+  }
+  .search-component-btnDiv{
+    display: inline-block;
+    text-align: center;
+    //vertical-align: top;
+    border: 1px solid #ffa9a9;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+  }
+  .search-component-searchBtn {
+    background: #E14C46;
+    border: none;
+    //border-radius: 4px;
+    color: #fff;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    min-width: 80px;
+    padding: 0;
+    position: relative;
+    width: 64px;
+    //margin: 6px 0;
+    font-size: 14px;
+    outline: none;
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10*/
+    user-select: none;
+  }
+  .search-component-searchBtn:hover {
+    //background: #d9f3f0;
+    background-color: rgb(229,115,115);
+    border-color: rgb(229,115,115);
+  }
+  .search-component-resetSearchBtn {
+    font-size: 14px;
+    color: #E14C46;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 10px 0 10px;
+    position: relative;
+    vertical-align: middle;
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10*/
+    user-select: none;
+  }
+  .search-component-rowArea {
+    width:auto;
+    min-width: 156px;
+    padding-left:10px;
+    //height: 40px;
+    padding-right: 0;
+    padding-top:4px;
+  }
+  .search-component-rowArea_right {
+    // float:right;
+    // text-align: right;
+  }
+  .u-form-control:focus {
+    border-color: #00b39e !important;
+    outline: 0;
+  }
+  .u-select-focused .u-select-selection, .u-select-selection:active, .u-select-selection:focus {
+    border-color: #00b39e !important;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .saveSearchPlan{
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    background: #e14c46;
+    //margin: 6px 0;
+    vertical-align: top;
+    line-height: 30px;
+    color: white;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-left: 1px solid #fff;
+  }
+  .searchPlanBox{
+    position:absolute;
+    width:150px;
+    min-height:30px;
+    line-height:30px;
+    border:1px solid #ddd;
+    z-index:1000;
+    background-color:#fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    left:-30px;
+
+    .iconSpan{
+      float: right;
+      margin-right: 8px;
+      color: red;
+      cursor:pointer;
+    }
+    .searchPlanName{
+      margin-left: 5px;
+      display: inline-block;
+      max-width: 118px;
+      overflow:hidden;
+      white-space: nowrap;
+      text-overflow:ellipsis;
+    }
+    p{
+      width:100%;
+      height:30px;
+      border-bottom:1px solid #ddd;
+      display: flow-root;
+      color:#666;
+    }
+    p::after{
+      content:'';
+      display:table;
+      clear:both;
+    }
+    p:last-child{
+      border:none;
+    }
+    p:hover{
+      background-color:#fff7f4;
+    }
+  }
+
+  .search-component-saveSearchPlanBtn{
+    cursor: pointer;
+    color: #34a2f3;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+}

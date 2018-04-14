@@ -1,0 +1,13 @@
+{
+	"presets": [ "env", "react", "stage-2" ],
+	"plugins": [
+		[
+			"import",
+			{
+				"libraryName": "tinper-bee",
+				"libraryDirectory": "lib",
+				"camel2DashComponentName": false
+			}
+		]
+	]
+}
