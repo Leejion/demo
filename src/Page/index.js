@@ -276,6 +276,7 @@ export default ({
 			};
 
 			this.button = {
+				// 会初始化state里面的值
 				createButton: createButton.bind(this),
 				setDisabled: setButtonDisabled.bind(this),
 				getDisabled: getButtonDisabled.bind(this),

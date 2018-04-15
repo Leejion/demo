@@ -27,7 +27,7 @@ const Option = Select.NCOption;
 const RadioGroup = Radio.NCRadioGroup;
 const FormItem = Form.FormItem;
 import './editTable.less';
-
+// 可以添加border选项
 function onCheckboxChange(moduleId, text, record, index, config) {
 	// console.log(moduleId, text, record, index, config)
 	this.state.table[moduleId].rows[index].selected = !this.state.table[moduleId].rows[index].selected;
@@ -73,7 +73,7 @@ export function createEditTable(moduleId, config) {
 		{ renderItem } = this.state,
 		_this = this;
 
-	//console.log(this.state)
+	console.log(this.state)
 
 	if (!meta || meta.moduletype !== 'table') return;
 	// 初始化table
@@ -89,7 +89,6 @@ export function createEditTable(moduleId, config) {
 		};
 	}
 	console.log(this.state)
-	return
 
 	let { rows = [], checkedAll = false, indeterminate = false } = this.state.table[moduleId];
 	let tableModeldata = this.state.tableModeldata[moduleId] || {
@@ -97,6 +96,8 @@ export function createEditTable(moduleId, config) {
 		"status": 0,
 		"values": {}
 	};
+
+	console.log(tableModeldata)
 
 	let defaultWidth = 100 / meta.items.length + '%',
 		defaultHeight = '40px';
@@ -122,6 +123,7 @@ export function createEditTable(moduleId, config) {
 	}
 
 	let tempColums = deepClone(meta.items.filter((item) => !!item.visible))
+	console.log(tempColums)
 
 	columns = tempColums.map((item, ind) => {
 		let {

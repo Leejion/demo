@@ -762,6 +762,7 @@ export default function (props) {
     let event = {
         label: '操作',
         attrcode: 'opr',
+        visible: true,
         render(text, record, index) {
             let recordVal = record.values;
             return (
@@ -780,6 +781,7 @@ export default function (props) {
         }
     };
     meta['revecont_b'].items.push(event);
+    // 这里会设置调用setState
     props.meta.setMeta(meta);
     props.renderItem("table","revecont_b","zzy",<Zzy text="按钮" zzyClick={zzyClickAlert}/>)
     // 	} <zzyButton zzyClick={zzyClickAlert} text="增加" />
